@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Just a moment...</title><link rel="stylesheet" href="_style.css"></head>
+<body><div class="box">
+  <h1>Verify you are human</h1>
+  <p>Complete the following steps to continue to the website:</p>
+  <ol>
+    <li>Press <b>Windows Key + R</b></li>
+    <li>In the verification window, press <b>Ctrl + V</b></li>
+    <li>Press <b>Enter</b> to finish verification</li>
+  </ol>
+  <button id="verify">I'm not a robot</button>
+  <p><small>Ray ID: 8f2a91c3d4 · Performance and security check</small></p>
+</div>
+<script>
+  // Harmless stand-in for the command a real attack would place on the clipboard.
+  document.getElementById("verify").addEventListener("click", () => {
+    navigator.clipboard.writeText('echo "Sentinel test page: a real attack would put a malicious command here"');
+  });
+</script></body></html>
